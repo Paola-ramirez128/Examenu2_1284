@@ -1,43 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:ramirezexamen/pantalla_inicio.dart';
+import 'package:ramirezexamen/pantalla_floating_action_button.dart';
+import 'package:ramirezexamen/pantalla_fitted_box.dart';
+import 'package:ramirezexamen/pantalla_roated_box.dart';
+import 'package:ramirezexamen/pantalla_choice_chip.dart';
+import 'package:ramirezexamen/pantalla_dragable.dart';
+import 'package:ramirezexamen/pantalla_tooltip.dart';
+import 'package:ramirezexamen/pantalla_null_aware_operators.dart';
+import 'package:ramirezexamen/pantalla_future_builder.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MiExamen());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+class MiExamen extends StatelessWidget {
+  const MiExamen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      title: 'Entre Paginas Routes',
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const PantallaUno(),
+        '/pantalla2': (context) => const PantallaDos(),
+        '/pantalla3': (context) => const PantallaTres(),
+        '/pantalla4': (context) => const PantallaCuatro(),
+        '/pantalla5': (context) => const PantallaCinco(),
+        '/pantalla6': (context) => const PantallaSeis(),
+        '/pantalla7': (context) => const PantallaSiete(),
+        '/pantalla8': (context) => PantallaOcho(),
+        '/pantalla9': (context) => PantallaNueve(),
+      },
     );
   }
 }
