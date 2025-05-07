@@ -24,42 +24,52 @@ class PantallaUno extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () => Navigator.pushNamed(context, '/pantalla2'),
-              child: const Text('Floating action button'),
+              child: const Text('List view'),
             ),
             const SizedBox(height: 20), // Espaciado
             ElevatedButton(
               onPressed: () => Navigator.pushNamed(context, '/pantalla3'),
-              child: const Text('Roated box'),
+              child: const Text('Gesture Detector'),
             ),
             const SizedBox(height: 20), // Espaciado
             ElevatedButton(
               onPressed: () => Navigator.pushNamed(context, '/pantalla4'),
-              child: const Text('Fitted box'),
+              child: const Text('Silver appbar'),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () => Navigator.pushNamed(context, '/pantalla5'),
-              child: const Text('Choice chip'),
+              child: const Text('Alert dialog'),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () => Navigator.pushNamed(context, '/pantalla6'),
-              child: const Text('Dragable'),
+              child: const Text('Page view'),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () => Navigator.pushNamed(context, '/pantalla7'),
-              child: const Text('Tooltip'),
+              child: const Text('Slider'),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () => Navigator.pushNamed(context, '/pantalla8'),
-              child: const Text('Null aware operators'),
+              child: const Text('Linear Gradient'),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () => Navigator.pushNamed(context, '/pantalla9'),
-              child: const Text('Future builder'),
+              child: const Text('Icob button'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, '/pantalla10'),
+              child: const Text('Roated box'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () => Navigator.pushNamed(context, '/pantalla11'),
+              child: const Text('Positioned'),
             ),
             const SizedBox(height: 20),
           ],

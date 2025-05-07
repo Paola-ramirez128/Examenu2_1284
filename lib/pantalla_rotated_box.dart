@@ -1,47 +1,58 @@
 import 'package:flutter/material.dart';
 
-class PantallaTres extends StatelessWidget {
-  const PantallaTres({Key? key}) : super(key: key);
+class PantallaDiez extends StatelessWidget {
+  const PantallaDiez({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffe9e4f1),
-      appBar: AppBar(title: const Text('Rotated Box')),
+      backgroundColor: Colors.deepPurple[50],
+      appBar: AppBar(
+        title: const Text('Rotated Box'),
+        centerTitle: true,
+        backgroundColor: Colors.purpleAccent,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+      ),
       body: ListView(
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10.0),
-              child: Image.asset(
-                'assets/democracy.png',
-              ), // Asegúrate de tener la imagen
+              child: SizedBox(
+                child: Image.asset('assets/democracy.png'),
+              ),
             ),
           ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               RotatedBox(
-                quarterTurns:
-                    1, // Cambiado a 1 para texto vertical (arriba → abajo)
-                child: Container(
-                  color: Colors.black,
+                quarterTurns: 3,
+                child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: const Text(
-                    'Challenges of democracy',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
+                  child: Container(
+                    color: Colors.black,
+                    child: const Padding(
+                      padding: EdgeInsets.all(5.0),
+                      child: Text(
+                        'Challenges of democracy',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                   ),
                 ),
               ),
-              const SizedBox(
-                  width: 8), // Espacio entre el texto vertical y el párrafo
-              Expanded(
-                // Ocupa el espacio restante
+              SizedBox(
+                width: MediaQuery.of(context).size.width - 70,
                 child: const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
